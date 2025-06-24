@@ -1,0 +1,79 @@
+# 🎬 Jellyfin Discord Webhook Templates (Español)
+
+Notificaciones enriquecidas y personalizadas para Jellyfin usando Discord Webhooks.  
+Incluye plantillas completas para eventos de reproducción y finalización con:
+
+- ✔️ Formato profesional de títulos
+- 🍿 Enlaces automáticos a IMDb y TMDb
+- 📺 Carátulas elegantes por tipo de contenido
+- 🎯 Mensajes personalizados si te dejas algo sin terminar 😅
+
+---
+
+## 🚀 ¿Qué incluye?
+
+| Evento            | Archivo                     | Descripción                                                                |
+|------------------|------------------------------|----------------------------------------------------------------------------|
+| Playback Start    | `templates/playback-start.json` | Notifica cuando alguien comienza a ver una película o episodio            |
+| Playback Stop     | `templates/playback-stop.json`  | Informa cuando se finaliza la reproducción, con mensaje dinámico          |
+
+---
+
+## ✨ Requisitos
+
+- Jellyfin v10.x o superior
+- Plugin de [Discord Webhooks para Jellyfin](https://github.com/seanmcbroom/jellyfin-discord-webhooks)
+- Canal de Discord con webhook configurado
+
+---
+
+## 🛠️ Cómo usar
+
+1. Abre la configuración del plugin de Webhooks en tu servidor Jellyfin.
+2. Crea un nuevo webhook para el evento `Playback Start` o `Playback Stop`.
+3. Copia el contenido desde el archivo correspondiente de este repositorio.
+4. Pega y guarda. ¡Listo!
+
+> Si ya tienes activos los eventos, puedes actualizarlos pegando directamente en el campo “Plantilla del mensaje”.
+
+---
+
+## 🧪 Ejemplos visuales
+
+### ▶️ Reproducción iniciada (Episodio)
+
+![Playback Start - Episodio](https://monthanin.ddns.net/github/Playback_Start.png)
+
+### 🎬 Reproducción iniciada (Película)
+
+![Playback Start - Película](https://monthanin.ddns.net/github/Playback_Start_Movie.png)
+
+### ⏹️ Reproducción finalizada (Episodio)
+
+![Playback Stop - Episodio](https://monthanin.ddns.net/github/Playback_Stop_Episode.png)
+
+### 🎞️ Reproducción finalizada (Película)
+
+![Playback Stop - Película](https://monthanin.ddns.net/github/Playback_Stop_Movie.png)
+
+---
+
+## 📣 Créditos
+
+Este proyecto nace gracias al trabajo de personalización de [@smonthan](https://github.com/usuario) inspirado en el plugin original de [@seanmcbroom](https://github.com/seanmcbroom).  
+Diseñado por frikis del buen gusto en las notificaciones.  
+¡Pull requests y estrellas son bienvenidas!
+
+---
+
+## 🧩 Próximamente
+
+- Soporte para eventos `Playback Failed` y `User Marked Favorite`
+- Modo oscuro para embeds (colores más suaves)
+- Estadísticas mensuales con los títulos más vistos
+
+---
+
+## ⚠️ Licencia
+
+MIT — úsalo, compártelo, modifícalo y dale amor.
