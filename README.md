@@ -31,10 +31,10 @@ Este repositorio incluye plantillas personalizadas para el plugin **Webhook** de
     <td><img src="docs/Playback_Stop_Episode.png" width="300"/></td>
   </tr>
   <tr>
-    <td colspan="2"><strong>Usuario Bloqueado</strong></td>
+    <td colspan="2" align="center"><strong>Usuario Bloqueado</strong></td>
   </tr>
   <tr>
-    <td colspan="2"><img src="docs/User_Locked.png" width="600"/></td>
+    <td colspan="2" align="center"><img src="docs/User_Locked.png" width="300"/></td>
   </tr>
 </table>
 
