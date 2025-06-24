@@ -39,6 +39,32 @@
       display: block;
       margin-top: 0.5em;
     }
+    .repo-link {
+      font-size: 1rem;
+      margin-top: 0.5em;
+      display: inline-block;
+    }
+    .repo-link a {
+      color: #888;
+      text-decoration: underline;
+    }
+    .floating-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #8957e5;
+      color: white;
+      padding: 12px 18px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      transition: background-color 0.3s ease;
+      z-index: 999;
+    }
+    .floating-button:hover {
+      background-color: #6e3fc9;
+    }
     footer {
       text-align: center;
       margin-top: 4em;
@@ -54,7 +80,11 @@
 <body>
 
   <h1>🎬 Plantillas Webhook para Jellyfin</h1>
-  <p>Notificaciones listas para usar en servidores de Discord. Personalizadas, limpias y en español.</p>
+  <p>
+    Notificaciones listas para usar en servidores de Discord. Personalizadas, limpias y en español.
+    <br>
+    <span class="repo-link">← <a href="https://github.com/MonthanEvE/jellyfin-discord-webhooks-spanish-templates" target="_blank">Volver al repositorio en GitHub</a></span>
+  </p>
 
   <h2>📸 Vista Previa</h2>
   <div class="grid">
@@ -91,8 +121,13 @@
 
   </div>
 
+  <a href="https://github.com/MonthanEvE/jellyfin-discord-webhooks-spanish-templates" target="_blank" class="floating-button">
+    ⭐ Ver en GitHub
+  </a>
+
   <footer>
     Hecho con ❤️ por <a href="https://github.com/MonthanEvE" target="_blank">@MonthanEvE</a> — 2025
   </footer>
+
 </body>
 </html>
