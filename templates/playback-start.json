@@ -1,0 +1,30 @@
+{
+  "username": "Jellyfin 📺",
+  "avatar_url": "https://i.imgur.com/XoypC0m.png",
+  "embeds": [
+    {
+      "title": "🎬 Reproducción iniciada",
+      "description": "**{User}** ha empezado a ver:\n**{ItemName}**",
+      "color": 5814783,
+      "thumbnail": {
+        "url": "{ItemImage}"
+      },
+      "fields": [
+        {
+          "name": "📁 Biblioteca",
+          "value": "{LibraryName}",
+          "inline": true
+        },
+        {
+          "name": "⏱️ Progreso inicial",
+          "value": "{PlayProgress}% completado",
+          "inline": true
+        }
+      ],
+      "footer": {
+        "text": "Servidor: {ServerName}"
+      },
+      "timestamp": "{Timestamp}"
+    }
+  ]
+}
