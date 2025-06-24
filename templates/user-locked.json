@@ -1,0 +1,23 @@
+{
+  "content": "{{MentionType}}",
+  "avatar_url": "{{AvatarUrl}}",
+  "username": "{{{BotUsername}}}",
+  "embeds": [
+    {
+      "author": {
+        "name": "Usuario bloqueado • {{{NotificationUsername}}}",
+        "url": "{{ServerUrl}}/web/index.html#!/useredit.html?userId={{UserId}}"
+      },
+      "thumbnail": {
+        "url": "{{ServerUrl}}/Users/{{UserId}}/Images/Primary"
+      },
+      "description": "{{~#if_exist NotificationUsername~}}> ``{{{NotificationUsername}}}`` ha sido bloqueado en ``{{{ServerName}}}`` por demasiados intentos fallidos de inicio de sesión.{{~/if_exist~}}\n\n{{~#if_exist ServerUrl~}}[**Reactivar usuario**]({{ServerUrl}}/web/index.html#!/useredit.html?userId={{UserId}}) • [**Restablecer contraseña**]({{ServerUrl}}/web/index.html#!/userpassword.html?userId={{UserId}}){{~/if_exist~}}",
+      "color": 15737923,
+      "footer": {
+        "text": "{{{ServerName}}}",
+        "icon_url": "https://i.imgur.com/Cy1g8dz.png"
+      },
+      "timestamp": "{{Timestamp}}"
+    }
+  ]
+}
