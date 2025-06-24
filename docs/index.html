@@ -1,80 +1,98 @@
-# 🎬 Jellyfin Discord Webhook Templates (Español)
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Plantillas Webhook Jellyfin</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0b0c10;
+      color: #e5e5e5;
+      margin: 0;
+      padding: 2em;
+    }
+    h1, h2 {
+      color: #66fcf1;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2em;
+      margin-top: 2em;
+    }
+    .preview {
+      background-color: #1f2833;
+      padding: 1em;
+      border-radius: 8px;
+      text-align: center;
+    }
+    .preview img {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 6px;
+    }
+    .preview a {
+      color: #45a29e;
+      text-decoration: none;
+      font-weight: bold;
+      display: block;
+      margin-top: 0.5em;
+    }
+    footer {
+      text-align: center;
+      margin-top: 4em;
+      font-size: 0.9em;
+      color: #888;
+    }
+    footer a {
+      color: #888;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
 
-Notificaciones enriquecidas y personalizadas para Jellyfin usando Discord Webhooks.  
-Incluye plantillas completas para eventos de reproducción y finalización con:
+  <h1>🎬 Plantillas Webhook para Jellyfin</h1>
+  <p>Notificaciones listas para usar en servidores de Discord. Personalizadas, limpias y en español.</p>
 
-- ✔️ Formato profesional de títulos
-- 🍿 Enlaces automáticos a IMDb y TMDb
-- 📺 Carátulas elegantes por tipo de contenido
-- 🎯 Mensajes personalizados si te dejas algo sin terminar 😅
+  <h2>📸 Vista Previa</h2>
+  <div class="grid">
 
----
+    <div class="preview">
+      <h3>Inicio (Película)</h3>
+      <img src="Playback_Start_Movie.png" alt="Inicio Película" />
+      <a href="../templates/playback-start.json">Ver JSON</a>
+    </div>
 
-## 🚀 ¿Qué incluye?
+    <div class="preview">
+      <h3>Inicio (Episodio)</h3>
+      <img src="Playback_Start.png" alt="Inicio Episodio" />
+      <a href="../templates/playback-start.json">Ver JSON</a>
+    </div>
 
-| Evento            | Archivo                     | Descripción                                                                |
-|------------------|------------------------------|----------------------------------------------------------------------------|
-| Playback Start    | `templates/playback-start.json` | Notifica cuando alguien comienza a ver una película o episodio            |
-| Playback Stop     | `templates/playback-stop.json`  | Informa cuando se finaliza la reproducción, con mensaje dinámico          |
+    <div class="preview">
+      <h3>Fin (Película)</h3>
+      <img src="Playback_Stop_Movie.png" alt="Fin Película" />
+      <a href="../templates/playback-stop.json">Ver JSON</a>
+    </div>
 
----
+    <div class="preview">
+      <h3>Fin (Episodio)</h3>
+      <img src="Playback_Stop_Episode.png" alt="Fin Episodio" />
+      <a href="../templates/playback-stop.json">Ver JSON</a>
+    </div>
 
-## ✨ Requisitos
+    <div class="preview">
+      <h3>Usuario Bloqueado</h3>
+      <img src="User_Locked.png" alt="Usuario Bloqueado" />
+      <a href="../templates/user-locked.json">Ver JSON</a>
+    </div>
 
-- Jellyfin v10.x o superior
-- Plugin de [Discord Webhooks para Jellyfin](https://github.com/seanmcbroom/jellyfin-discord-webhooks)
-- Canal de Discord con webhook configurado
+  </div>
 
----
-
-## 🛠️ Cómo usar
-
-1. Abre la configuración del plugin de Webhooks en tu servidor Jellyfin.
-2. Crea un nuevo webhook para el evento `Playback Start` o `Playback Stop`.
-3. Copia el contenido desde el archivo correspondiente de este repositorio.
-4. Pega y guarda. ¡Listo!
-
-> Si ya tienes activos los eventos, puedes actualizarlos pegando directamente en el campo “Plantilla del mensaje”.
-
----
-
-## 🧪 Ejemplos visuales
-
-### ▶️ Reproducción iniciada (Episodio)
-
-![Playback Start - Episodio](https://monthanin.ddns.net/github/Playback_Start.png)
-
-### 🎬 Reproducción iniciada (Película)
-
-![Playback Start - Película](https://monthanin.ddns.net/github/Playback_Start_Movie.png)
-
-### ⏹️ Reproducción finalizada (Episodio)
-
-![Playback Stop - Episodio](https://monthanin.ddns.net/github/Playback_Stop_Episode.png)
-
-### 🎞️ Reproducción finalizada (Película)
-
-![Playback Stop - Película](https://monthanin.ddns.net/github/Playback_Stop_Movie.png)
-
----
-
-## 📣 Créditos
-
-Este proyecto nace gracias al trabajo de personalización de [@MonthanEvE](https://github.com/MonthanEvE)
- inspirado en el plugin original de [@seanmcbroom](https://github.com/seanmcbroom).  
-Diseñado por frikis del buen gusto en las notificaciones.  
-¡Pull requests y estrellas son bienvenidas!
-
----
-
-## 🧩 Próximamente
-
-- Soporte para eventos `Playback Failed` y `User Marked Favorite`
-- Modo oscuro para embeds (colores más suaves)
-- Estadísticas mensuales con los títulos más vistos
-
----
-
-## ⚠️ Licencia
-
-MIT — úsalo, compártelo, modifícalo y dale amor.
+  <footer>
+    Hecho con ❤️ por <a href="https://github.com/MonthanEvE" target="_blank">@MonthanEvE</a> — 2025
+  </footer>
+</body>
+</html>
