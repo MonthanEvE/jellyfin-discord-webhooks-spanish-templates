@@ -1,133 +1,151 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Plantillas Webhook Jellyfin</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #0b0c10;
-      color: #e5e5e5;
-      margin: 0;
-      padding: 2em;
-    }
-    h1, h2 {
-      color: #66fcf1;
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2em;
-      margin-top: 2em;
-    }
-    .preview {
-      background-color: #1f2833;
-      padding: 1em;
-      border-radius: 8px;
-      text-align: center;
-    }
-    .preview img {
-      width: 100%;
-      max-width: 300px;
-      border-radius: 6px;
-    }
-    .preview a {
-      color: #45a29e;
-      text-decoration: none;
-      font-weight: bold;
-      display: block;
-      margin-top: 0.5em;
-    }
-    .repo-link {
-      font-size: 1rem;
-      margin-top: 0.5em;
-      display: inline-block;
-    }
-    .repo-link a {
-      color: #888;
-      text-decoration: underline;
-    }
-    .floating-button {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #8957e5;
-      color: white;
-      padding: 12px 18px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-      transition: background-color 0.3s ease;
-      z-index: 999;
-    }
-    .floating-button:hover {
-      background-color: #6e3fc9;
-    }
-    footer {
-      text-align: center;
-      margin-top: 4em;
-      font-size: 0.9em;
-      color: #888;
-    }
-    footer a {
-      color: #888;
-      text-decoration: underline;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plantillas Webhook Discord para Jellyfin</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; background-color: #121212; color: white; }
+        .lang-selector { margin-bottom: 20px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+        .preview { background: #1e1e1e; padding: 15px; border-radius: 10px; text-align: center; }
+        .preview img { max-width: 100%; border-radius: 5px; }
+        a { color: #4ea3ff; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        h2 { border-bottom: 1px solid #333; padding-bottom: 5px; }
+    </style>
 </head>
 <body>
 
-  <h1>🎬 Plantillas Webhook para Jellyfin</h1>
-  <p>
-    Notificaciones listas para usar en servidores de Discord. Personalizadas, limpias y en español.
-    <br>
-    <span class="repo-link">← <a href="https://github.com/MonthanEvE/jellyfin-discord-webhooks-spanish-templates" target="_blank">Volver al repositorio en GitHub</a></span>
-  </p>
-
-  <h2>📸 Vista Previa</h2>
-  <div class="grid">
-
-    <div class="preview">
-      <h3>Inicio (Película)</h3>
-      <img src="Playback_Start_Movie.png" alt="Inicio Película" />
-      <a href="../templates/playback-start.json">Ver JSON</a>
+    <!-- Selector de idioma -->
+    <div class="lang-selector">
+        <label for="language">🌐 Seleccionar idioma / Select language:</label>
+        <select id="language" onchange="changeLanguage()">
+            <option value="es" selected>Español</option>
+            <option value="en">English</option>
+        </select>
     </div>
 
-    <div class="preview">
-      <h3>Inicio (Episodio)</h3>
-      <img src="Playback_Start.png" alt="Inicio Episodio" />
-      <a href="../templates/playback-start.json">Ver JSON</a>
+    <!-- Español -->
+    <div id="content-es" class="lang">
+        <h1>📦 Plantillas de Webhook para Jellyfin</h1>
+        <p>Estas plantillas envían notificaciones de eventos de Jellyfin a Discord, totalmente en español.</p>
+
+        <h2>🎬 Nuevo contenido añadido</h2>
+        <div class="grid">
+            <div class="preview">
+                <h3>Episodio</h3>
+                <img src="Item_added_Episode.png" alt="Item Added Episode">
+                <a href="../templates/item-added.json">Ver JSON</a>
+            </div>
+            <div class="preview">
+                <h3>Película</h3>
+                <img src="Item_added_Movie.png" alt="Item Added Movie">
+                <a href="../templates/item-added.json">Ver JSON</a>
+            </div>
+        </div>
+
+        <h2>▶ Reproducción iniciada</h2>
+        <div class="grid">
+            <div class="preview">
+                <h3>Episodio</h3>
+                <img src="Playback_Start_Episode.png" alt="Playback Start Episode">
+                <a href="../templates/playback-start.json">Ver JSON</a>
+            </div>
+            <div class="preview">
+                <h3>Película</h3>
+                <img src="Playback_Start_Movie.png" alt="Playback Start Movie">
+                <a href="../templates/playback-start.json">Ver JSON</a>
+            </div>
+        </div>
+
+        <h2>⏹ Reproducción detenida</h2>
+        <div class="grid">
+            <div class="preview">
+                <h3>Episodio</h3>
+                <img src="Playback_Stop_Episode.png" alt="Playback Stop Episode">
+                <a href="../templates/playback-stop.json">Ver JSON</a>
+            </div>
+            <div class="preview">
+                <h3>Película</h3>
+                <img src="Playback_Stop_Movie.png" alt="Playback Stop Movie">
+                <a href="../templates/playback-stop.json">Ver JSON</a>
+            </div>
+        </div>
+
+        <h2>🔒 Usuario bloqueado</h2>
+        <div class="grid">
+            <div class="preview">
+                <img src="User_Locked.png" alt="User Locked">
+                <a href="../templates/user-locked.json">Ver JSON</a>
+            </div>
+        </div>
     </div>
 
-    <div class="preview">
-      <h3>Fin (Película)</h3>
-      <img src="Playback_Stop_Movie.png" alt="Fin Película" />
-      <a href="../templates/playback-stop.json">Ver JSON</a>
+    <!-- Inglés -->
+    <div id="content-en" class="lang" style="display:none;">
+        <h1>📦 Discord Webhook Templates for Jellyfin</h1>
+        <p>These templates send Jellyfin event notifications to Discord, fully translated into Spanish.</p>
+
+        <h2>🎬 New content added</h2>
+        <div class="grid">
+            <div class="preview">
+                <h3>Episode</h3>
+                <img src="Item_added_Episode.png" alt="Item Added Episode">
+                <a href="../templates/item-added.json">View JSON</a>
+            </div>
+            <div class="preview">
+                <h3>Movie</h3>
+                <img src="Item_added_Movie.png" alt="Item Added Movie">
+                <a href="../templates/item-added.json">View JSON</a>
+            </div>
+        </div>
+
+        <h2>▶ Playback started</h2>
+        <div class="grid">
+            <div class="preview">
+                <h3>Episode</h3>
+                <img src="Playback_Start_Episode.png" alt="Playback Start Episode">
+                <a href="../templates/playback-start.json">View JSON</a>
+            </div>
+            <div class="preview">
+                <h3>Movie</h3>
+                <img src="Playback_Start_Movie.png" alt="Playback Start Movie">
+                <a href="../templates/playback-start.json">View JSON</a>
+            </div>
+        </div>
+
+        <h2>⏹ Playback stopped</h2>
+        <div class="grid">
+            <div class="preview">
+                <h3>Episode</h3>
+                <img src="Playback_Stop_Episode.png" alt="Playback Stop Episode">
+                <a href="../templates/playback-stop.json">View JSON</a>
+            </div>
+            <div class="preview">
+                <h3>Movie</h3>
+                <img src="Playback_Stop_Movie.png" alt="Playback Stop Movie">
+                <a href="../templates/playback-stop.json">View JSON</a>
+            </div>
+        </div>
+
+        <h2>🔒 User locked</h2>
+        <div class="grid">
+            <div class="preview">
+                <img src="User_Locked.png" alt="User Locked">
+                <a href="../templates/user-locked.json">View JSON</a>
+            </div>
+        </div>
     </div>
 
-    <div class="preview">
-      <h3>Fin (Episodio)</h3>
-      <img src="Playback_Stop_Episode.png" alt="Fin Episodio" />
-      <a href="../templates/playback-stop.json">Ver JSON</a>
-    </div>
-
-    <div class="preview">
-      <h3>Usuario Bloqueado</h3>
-      <img src="User_Locked.png" alt="Usuario Bloqueado" />
-      <a href="../templates/user-locked.json">Ver JSON</a>
-    </div>
-
-  </div>
-
-  <a href="https://github.com/MonthanEvE/jellyfin-discord-webhooks-spanish-templates" target="_blank" class="floating-button">
-    ⭐ Ver en GitHub
-  </a>
-
-  <footer>
-    Hecho con ❤️ por <a href="https://github.com/MonthanEvE" target="_blank">@MonthanEvE</a> — 2025
-  </footer>
+    <!-- Script cambio de idioma -->
+    <script>
+        function changeLanguage() {
+            const selectedLang = document.getElementById("language").value;
+            document.querySelectorAll(".lang").forEach(div => div.style.display = "none");
+            document.getElementById("content-" + selectedLang).style.display = "block";
+        }
+    </script>
 
 </body>
 </html>
