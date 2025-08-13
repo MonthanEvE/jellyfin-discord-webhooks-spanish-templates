@@ -1,0 +1,47 @@
+{{#if_equals ItemType 'Episode'}}
+{
+  "content": "{{MentionType}}",
+  "avatar_url": "https://monthanin.ddns.net/webhook-icons/jellyfin-episode-added.png",
+  "username": "Monthan AI bot",
+  "embeds": [
+    {
+      "title": "📺 Nuevo episodio añadido",
+      "description": "**{{{SeriesName}}} – S{{SeasonNumber00}}E{{EpisodeNumber00}} – {{{Name}}}**\n\n{{~#if_exist Overview~}}{{{Overview}}}\n\n{{~/if_exist~}}▶ [**Ver ahora**]({{ServerUrl}}/web/index.html#!/details?id={{ItemId}}&serverId={{ServerId}}){{#if_exist Provider_imdb}} • [**IMDB**](https://www.imdb.com/title/{{Provider_imdb}}/){{/if_exist}}{{#if_exist Provider_tvdb}} • [**TheTVDb**](https://thetvdb.com/?id={{Provider_tvdb}}){{/if_exist}}",
+      "thumbnail": {
+        "url": "{{ServerUrl}}/Items/{{SeriesId}}/Images/Primary"
+      },
+      "color": 3381759,
+      "footer": {
+        "text": "{{{ServerName}}}",
+        "icon_url": "https://i.imgur.com/Cy1g8dz.png"
+      },
+      "timestamp": "{{Timestamp}}"
+    }
+  ]
+}
+{{/if_equals}}
+
+{{#if_equals ItemType 'Movie'}}
+{{#unless SeasonNumber00}} 
+{
+  "content": "{{MentionType}}",
+  "avatar_url": "https://monthanin.ddns.net/webhook-icons/jellyfin-movie-added.png",
+  "username": "Monthan AI bot",
+  "embeds": [
+    {
+      "title": "🎬 Nueva película añadida",
+      "description": "**{{{Name}}} ({{Year}})**\n\n{{~#if_exist Overview~}}{{{Overview}}}\n\n{{~/if_exist~}}▶ [**Ver ahora**]({{ServerUrl}}/web/index.html#!/details?id={{ItemId}}&serverId={{ServerId}}){{#if_exist Provider_imdb}} • [**IMDB**](https://www.imdb.com/title/{{Provider_imdb}}/){{/if_exist}}{{#if_exist Provider_tvdb}} • [**TheTVDb**](https://thetvdb.com/?id={{Provider_tvdb}}){{/if_exist}}",
+      "thumbnail": {
+        "url": "{{ServerUrl}}/Items/{{ItemId}}/Images/Primary"
+      },
+      "color": 3381759,
+      "footer": {
+        "text": "{{{ServerName}}}",
+        "icon_url": "https://i.imgur.com/Cy1g8dz.png"
+      },
+      "timestamp": "{{Timestamp}}"
+    }
+  ]
+}
+{{/unless}}
+{{/if_equals}}
