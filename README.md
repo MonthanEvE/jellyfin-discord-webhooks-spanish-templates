@@ -6,12 +6,14 @@ Este repositorio incluye plantillas personalizadas para el plugin **Webhook** de
 
 - Playback Start (películas y episodios)
 - Playback Stop (películas y episodios)
-- Item Added (nuevo contenido)
+- Item Added (nuevo contenido: películas y episodios)
 - User Blocked (bloqueo por intentos fallidos)
 
 ---
 
 ## ✨ Vista Previa
+
+🔗 [Ver página de demostración](https://monthaneve.github.io/jellyfin-discord-webhooks-spanish-templates/)  
 
 <table>
   <tr>
@@ -20,7 +22,7 @@ Este repositorio incluye plantillas personalizadas para el plugin **Webhook** de
   </tr>
   <tr>
     <td><img src="docs/Playback_Start_Movie.png" width="300"/></td>
-    <td><img src="docs/Playback_Start.png" width="300"/></td>
+    <td><img src="docs/Playback_Start_Episode.png" width="300"/></td>
   </tr>
   <tr>
     <td><strong>Fin (Película)</strong></td>
@@ -29,6 +31,14 @@ Este repositorio incluye plantillas personalizadas para el plugin **Webhook** de
   <tr>
     <td><img src="docs/Playback_Stop_Movie.png" width="300"/></td>
     <td><img src="docs/Playback_Stop_Episode.png" width="300"/></td>
+  </tr>
+  <tr>
+    <td><strong>Nuevo Contenido (Película)</strong></td>
+    <td><strong>Nuevo Contenido (Episodio)</strong></td>
+  </tr>
+  <tr>
+    <td><img src="docs/Item_added_Movie.png" width="300"/></td>
+    <td><img src="docs/Item_added_Episode.png" width="300"/></td>
   </tr>
   <tr>
     <td colspan="2" align="center"><strong>Usuario Bloqueado</strong></td>
@@ -42,15 +52,15 @@ Este repositorio incluye plantillas personalizadas para el plugin **Webhook** de
 
 ## 📁 Estructura
 
-- `templates/*.json` → Plantillas para usar en Jellyfin Webhook
-- `docs/*.png` → Previews visuales para cada plantilla
-- `docs/index.html` → Página de demostración
+- `templates/*.json` → Plantillas para usar en Jellyfin Webhook  
+- `docs/*.png` → Previews visuales para cada plantilla  
+- `docs/index.html` → Página de demostración interactiva  
 
 ---
 
 ## 🙌 Créditos
 
-Hecho con ❤️ por [@MonthanEvE](https://github.com/MonthanEvE), con la ayuda de Copilot, la comunidad y los ejemplos de [@seanmcbroom](https://github.com/seanmcbroom).
+Hecho con ❤️ por [@MonthanEvE](https://github.com/MonthanEvE), con la ayuda de Copilot y ChatGPT, la comunidad y los ejemplos de [@seanmcbroom](https://github.com/seanmcbroom).
 
 ---
 
