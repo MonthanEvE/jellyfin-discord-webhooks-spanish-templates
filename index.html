@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jellyfin Discord Webhook Templates</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: #121212;
+      color: white;
+    }
+    .lang-selector {
+      margin-bottom: 20px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+    .preview {
+      background: #1e1e1e;
+      padding: 15px;
+      border-radius: 10px;
+      text-align: center;
+    }
+    .preview img {
+      max-width: 100%;
+      border-radius: 6px;
+    }
+    a {
+      color: #4ea3ff;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    h2 {
+      border-bottom: 1px solid #333;
+      padding-bottom: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="lang-selector">
+    <label for="language">🌐 Seleccionar idioma / Select language:</label>
+    <select id="language" onchange="changeLanguage()">
+      <option value="es" selected>Español</option>
+      <option value="en">English</option>
+    </select>
+  </div>
+
+  <div id="content-es" class="lang">
+    <h1>📦 Plantillas de Webhook para Jellyfin</h1>
+    <p>Plantillas JSON para enviar notificaciones de Jellyfin a Discord con un formato visual mejorado.</p>
+
+    <h2>🎬 Nuevo contenido añadido</h2>
+    <div class="grid">
+      <div class="preview">
+        <h3>Contenido añadido</h3>
+        <img src="jellyfin-added-movie.png" alt="Item Added">
+        <p><a href="item-added.json">Ver JSON</a></p>
+      </div>
+    </div>
+
+    <h2>▶ Reproducción iniciada</h2>
+    <div class="grid">
+      <div class="preview">
+        <h3>Episodio</h3>
+        <img src="jellyfin-playback-start-episode.png" alt="Playback Start Episode">
+        <p><a href="playback-start.json">Ver JSON</a></p>
+      </div>
+      <div class="preview">
+        <h3>Película</h3>
+        <img src="jellyfin-playback-start-movie.png" alt="Playback Start Movie">
+        <p><a href="playback-start.json">Ver JSON</a></p>
+      </div>
+    </div>
+
+    <h2>⏹ Reproducción detenida</h2>
+    <div class="grid">
+      <div class="preview">
+        <h3>Episodio</h3>
+        <img src="jellyfin-playback-stop-episode.png" alt="Playback Stop Episode">
+        <p><a href="playback-stop.json">Ver JSON</a></p>
+      </div>
+      <div class="preview">
+        <h3>Película</h3>
+        <img src="jellyfin-playback-stop-movie.png" alt="Playback Stop Movie">
+        <p><a href="playback-stop.json">Ver JSON</a></p>
+      </div>
+    </div>
+
+    <h2>🔒 Usuario bloqueado</h2>
+    <div class="grid">
+      <div class="preview">
+        <h3>Usuario bloqueado</h3>
+        <img src="jellyfin-user-blocked.png" alt="User Locked">
+        <p><a href="user-locked.json">Ver JSON</a></p>
+      </div>
+    </div>
+  </div>
+
+  <div id="content-en" class="lang" style="display:none;">
+    <h1>📦 Discord Webhook Templates for Jellyfin</h1>
+    <p>JSON templates to send Jellyfin notifications to Discord with an improved visual format.</p>
+
+    <h2>🎬 New content added</h2>
+    <div class="grid">
+      <div class="preview">
+        <h3>New content added</h3>
+        <img src="jellyfin-added-movie.png" alt="Item Added">
+        <p><a href="item-added.json">View JSON</a></p>
+      </div>
+    </div>
+
+    <h2>▶ Playback started</h2>
+    <div class="grid">
+      <div class="preview">
+        <h3>Episode</h3>
+        <img src="jellyfin-playback-start-episode.png" alt="Playback Start Episode">
+        <p><a href="playback-start.json">View JSON</a></p>
+      </div>
+      <div class="preview">
+        <h3>Movie</h3>
+        <img src="jellyfin-playback-start-movie.png" alt="Playback Start Movie">
+        <p><a href="playback-start.json">View JSON</a></p>
+      </div>
+    </div>
+
+    <h2>⏹ Playback stopped</h2>
+    <div class="grid">
+      <div class="preview">
+        <h3>Episode</h3>
+        <img src="jellyfin-playback-stop-episode.png" alt="Playback Stop Episode">
+        <p><a href="playback-stop.json">View JSON</a></p>
+      </div>
+      <div class="preview">
+        <h3>Movie</h3>
+        <img src="jellyfin-playback-stop-movie.png" alt="Playback Stop Movie">
+        <p><a href="playback-stop.json">View JSON</a></p>
+      </div>
+    </div>
+
+    <h2>🔒 User locked</h2>
+    <div class="grid">
+      <div class="preview">
+        <h3>User locked</h3>
+        <img src="jellyfin-user-blocked.png" alt="User Locked">
+        <p><a href="user-locked.json">View JSON</a></p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function changeLanguage() {
+      const selectedLang = document.getElementById("language").value;
+      document.querySelectorAll(".lang").forEach(div => div.style.display = "none");
+      document.getElementById("content-" + selectedLang).style.display = "block";
+    }
+  </script>
+
+</body>
+</html>

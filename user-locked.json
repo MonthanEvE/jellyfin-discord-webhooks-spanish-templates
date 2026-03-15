@@ -1,0 +1,26 @@
+{
+  "content": "⚠️ **ALERTA DE SEGURIDAD**",
+  "username": "Monthan_AI_Seguridad",
+  "avatar_url": "https://YOUR_DOMAIN/webhook-icons/jellyfin-user-blocked.png",
+  "embeds": [
+    {
+      "title": "Usuario Bloqueado: {{NotificationUsername}}",
+      "description": "Se ha bloqueado el acceso a **{{ServerName}}** tras demasiados intentos fallidos.\n\n[🔓 Gestionar usuario bloqueado](https://YOUR_DOMAIN/jellyfin/web/#/dashboard/users/profile?userId={{UserId}})\n[👥 Lista de Usuarios](https://YOUR_DOMAIN/jellyfin/web/#/dashboard/users)",
+      "color": 15737923,
+      "thumbnail": {
+        "url": "https://YOUR_DOMAIN/jellyfin/Users/{{UserId}}/Images/Primary"
+      },
+      "fields": [
+        { "name": "Usuario", "value": "`{{NotificationUsername}}`", "inline": true },
+        { "name": "ID", "value": "`{{UserId}}`", "inline": true }
+      ],
+      "footer": { 
+        "text": "Jellyfin", 
+        "icon_url": "https://YOUR_DOMAIN/webhook-icons/jellyfin-icon.png" 
+      },
+      "timestamp": "{{Timestamp}}"
+    }
+  ]
+}
+
+Nota para que funcione el campo server url en la configuración de Jellyfin debe ser https://YOUR_DOMAIN/jellyfin

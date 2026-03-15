@@ -1,0 +1,28 @@
+{
+  "content": "Se ha detenido la reproducción:",
+  "username": "Monthan_AI_actualizaciones_Jellyfin",
+  "avatar_url": "https://YOUR_DOMAIN/webhook-icons/jellyfin-playback-stop-{{#if SeriesName}}episode{{else}}movie{{/if}}.png",
+  "embeds": [
+    {
+      "title": "{{#if SeriesName}}{{SeriesName}}{{else}}{{Name}}{{#if Year}} ({{Year}}){{/if}}{{/if}}",
+      "description": "{{#if SeriesName}}**S{{SeasonNumber}}E{{EpisodeNumber}}: {{Name}}**\n{{/if}}{{{Overview}}}\n\n▶ [Ver ahora](https://YOUR_DOMAIN/jellyfin/web/index.html#!/details?id={{ItemId}})",
+      "color": 16711680,
+      "thumbnail": {
+        "url": "https://YOUR_DOMAIN/jellyfin/Items/{{#if SeriesId}}{{SeriesId}}{{else}}{{ItemId}}{{/if}}/Images/Primary"
+      },
+      "fields": [
+        { "name": "Dispositivo", "value": "{{DeviceName}} ({{Client}})", "inline": true },
+        { "name": "Tipo", "value": "{{#if SeriesName}}📺 Episodio{{else}}🎬 Película{{/if}}", "inline": true },
+        { "name": "Usuario", "value": "{{NotificationUsername}}", "inline": true },
+        { "name": "Tiempo reproducido", "value": "{{PlaybackPosition}}/{{RunTime}}", "inline": true }
+      ],
+      "footer": { 
+        "text": "Jellyfin", 
+        "icon_url": "https://YOUR_DOMAIN/webhook-icons/jellyfin-icon.png" 
+      },
+      "timestamp": "{{Timestamp}}"
+    }
+  ]
+}
+
+Nota para que funcione el campo server url en la configuración de Jellyfin debe ser https://YOUR_DOMAIN/jellyfin
