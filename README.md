@@ -1,69 +1,105 @@
-# Plantillas de Webhook para Jellyfin en Español
+# 🎬 Jellyfin Discord Webhook Templates
 
-Este repositorio incluye plantillas personalizadas para el plugin **Webhook** de Jellyfin, diseñadas para ofrecer notificaciones atractivas y funcionales en servidores de Discord.  
+Plantillas enriquecidas y personalizadas para enviar notificaciones de Jellyfin a Discord mediante Webhooks.
 
-📦 Incluye:
+Incluye eventos listos para usar en español con:
 
-- Playback Start (películas y episodios)
-- Playback Stop (películas y episodios)
-- Item Added (nuevo contenido: películas y episodios)
-- User Blocked (bloqueo por intentos fallidos)
-
----
-
-## ✨ Vista Previa
-
-🔗 [Ver página de demostración](https://monthaneve.github.io/jellyfin-discord-webhooks-spanish-templates/)  
-
-<table>
-  <tr>
-    <td><strong>Inicio (Película)</strong></td>
-    <td><strong>Inicio (Episodio)</strong></td>
-  </tr>
-  <tr>
-    <td><img src="docs/Playback_Start_Movie.png" width="300"/></td>
-    <td><img src="docs/Playback_Start_Episode.png" width="300"/></td>
-  </tr>
-  <tr>
-    <td><strong>Fin (Película)</strong></td>
-    <td><strong>Fin (Episodio)</strong></td>
-  </tr>
-  <tr>
-    <td><img src="docs/Playback_Stop_Movie.png" width="300"/></td>
-    <td><img src="docs/Playback_Stop_Episode.png" width="300"/></td>
-  </tr>
-  <tr>
-    <td><strong>Nuevo Contenido (Película)</strong></td>
-    <td><strong>Nuevo Contenido (Episodio)</strong></td>
-  </tr>
-  <tr>
-    <td><img src="docs/Item_added_Movie.png" width="300"/></td>
-    <td><img src="docs/Item_added_Episode.png" width="300"/></td>
-  </tr>
-  <tr>
-    <td colspan="2" align="center"><strong>Usuario Bloqueado</strong></td>
-  </tr>
-  <tr>
-    <td colspan="2" align="center"><img src="docs/User_Locked.png" width="300"/></td>
-  </tr>
-</table>
+- ✔️ Formato visual más limpio
+- 🍿 Enlaces automáticos a IMDb y TMDb
+- 📺 Imágenes diferenciadas por tipo de evento
+- 🎯 Mensajes más expresivos para reproducción iniciada, detenida, contenido añadido y usuario bloqueado
 
 ---
 
-## 📁 Estructura
+## 🚀 Contenido incluido
 
-- `templates/*.json` → Plantillas para usar en Jellyfin Webhook  
-- `docs/*.png` → Previews visuales para cada plantilla  
-- `docs/index.html` → Página de demostración interactiva  
-
----
-
-## 🙌 Créditos
-
-Hecho con ❤️ por [@MonthanEvE](https://github.com/MonthanEvE), con la ayuda de Copilot y ChatGPT, la comunidad y los ejemplos de [@seanmcbroom](https://github.com/seanmcbroom).
+| Evento | Archivo | Descripción |
+|---|---|---|
+| Item Added | `item-added.json` | Notifica cuando se añade una película o episodio |
+| Playback Start | `playback-start.json` | Notifica cuando alguien empieza a reproducir una película o episodio |
+| Playback Stop | `playback-stop.json` | Informa cuando se detiene o finaliza una reproducción |
+| User Locked | `user-locked.json` | Notifica cuando un usuario queda bloqueado |
 
 ---
 
-## 🧪 ¿Quieres aportar?
+## ✨ Requisitos
 
-Las pull requests y mejoras son bienvenidas, especialmente para internacionalización, nuevas plantillas o soporte de embeds avanzados.
+- Jellyfin 10.x o superior
+- Plugin [Discord Webhooks for Jellyfin](https://github.com/seanmcbroom/jellyfin-discord-webhooks)
+- Un webhook de Discord ya configurado
+
+---
+
+## 🛠️ Cómo usar
+
+1. Abre la configuración del plugin de Webhooks en tu servidor Jellyfin.
+2. Crea o edita un webhook para el evento que quieras personalizar.
+3. Abre el archivo JSON correspondiente de este repositorio.
+4. Copia su contenido completo.
+5. Pégalo en el campo de plantilla del plugin.
+6. Guarda los cambios.
+
+---
+
+## 🧪 Ejemplos visuales
+
+### 🎬 Nuevo contenido añadido
+
+| Película | Episodio |
+|---|---|
+| ![Item Added Movie](./jellyfin-added-movie.png) | ![Item Added Episode](./jellyfin-episode-added.png) |
+
+### ▶️ Reproducción iniciada
+
+| Película | Episodio |
+|---|---|
+| ![Playback Start Movie](./jellyfin-playback-start-movie.png) | ![Playback Start Episode](./jellyfin-playback-start-episode.png) |
+
+### ⏹️ Reproducción detenida
+
+| Película | Episodio |
+|---|---|
+| ![Playback Stop Movie](./jellyfin-playback-stop-movie.png) | ![Playback Stop Episode](./jellyfin-playback-stop-episode.png) |
+
+### 🔒 Usuario bloqueado
+
+![User Locked](./jellyfin-user-blocked.png)
+
+---
+
+## 🌐 Vista web
+
+- `index.html` incluido en el repositorio para vista de demostración
+- versión publicada en tu servidor: `https://monthanin.com/github/`
+
+---
+
+## 📦 Archivos del repositorio
+
+### Templates JSON
+- `item-added.json`
+- `playback-start.json`
+- `playback-stop.json`
+- `user-locked.json`
+
+### Recursos visuales
+- `jellyfin-icon.png`
+- `jellyfin-added-movie.png`
+- `jellyfin-episode-added.png`
+- `jellyfin-playback-start-episode.png`
+- `jellyfin-playback-start-movie.png`
+- `jellyfin-playback-stop-episode.png`
+- `jellyfin-playback-stop-movie.png`
+- `jellyfin-user-blocked.png`
+
+---
+
+## 📣 Créditos
+
+Personalización y adaptación realizada por MonthanIn a partir del trabajo original del plugin de [seanmcbroom](https://github.com/seanmcbroom/jellyfin-discord-webhooks).
+
+---
+
+## ⚠️ Licencia
+
+MIT
